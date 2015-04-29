@@ -14,5 +14,9 @@ public class RestApi {
                 .setDistrict(req.queryParams("district"))
                 .setStreet(req.queryParams("street"))
                 .scratchOff() + "\n");
+        get("/json/person", (req, res) -> new Ticket()
+                .setDistrict(req.queryParams("district"))
+                .setStreet(req.queryParams("street"))
+                .scratchOff().toJson() + "\n");
     }
 }

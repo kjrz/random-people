@@ -1,9 +1,14 @@
 package rso.random.lottery;
 
+import com.google.gson.Gson;
+
 /**
  * @author kjrz
  */
 public class RandomPerson {
+    public static final String WARSZAWA = "Warszawa-";
+    public static final Gson GSON = new Gson();
+
     public final String firstName;
     public final String lastName;
     public final String district;
@@ -18,6 +23,10 @@ public class RandomPerson {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName + ", " + street + ", " + "Warszawa" + "-" + district;
+        return firstName + " " + lastName + ", " + street + ", " + WARSZAWA + district;
+    }
+
+    public String toJson() {
+        return GSON.toJson(this);
     }
 }
