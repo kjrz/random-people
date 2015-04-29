@@ -16,11 +16,11 @@ docker run -p 4567:4567 random-people
 Test:
 ```
 $ curl localhost:4567/person
-Mariusz Węsek, Smolki, Warszawa-Wola
-
-$ curl localhost:4567/person?street=Obozowa
-Edyta Cajdler, Obozowa, Warszawa-Wola
+Sylwia Pocztowska, Bandurskiego, Warszawa-Ursus
 
 $ curl "localhost:4567/person?street=Magiera&district=Bielany"
 Wiesława Śleszyńska, Magiera, Warszawa-Bielany
+
+$ curl localhost:4567/json/person
+{"firstName":"Sławomir","lastName":"Brożyna","district":"Praga Południe","street":"Metalowców"}
 ```
