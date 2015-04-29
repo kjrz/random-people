@@ -16,10 +16,6 @@ public class RandomPerson {
         this.street = street;
     }
 
-    public RandomPerson(String firstName, String lastName, String street) {
-        this(firstName, lastName, "Wola", street);
-    }
-
     @Override
     public String toString() {
         return firstName + " " + lastName + ", " + street + ", " + "Warszawa" + "-" + district;

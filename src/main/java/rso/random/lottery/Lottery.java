@@ -2,6 +2,7 @@ package rso.random.lottery;
 
 import rso.random.data.DataSet;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -12,9 +13,23 @@ public enum Lottery {
     INSTANCE;
 
     private final Random r = new Random();
+    private final List<String> districts = new ArrayList<>(DataSet.INSTANCE.STREETS.keySet());
 
     private enum Gender {
         MALE, FEMALE
+    }
+
+    public RandomPerson nextRandomPerson() {
+        String district = nextDistrict();
+        String street = nextStreet(district);
+        return nextRandomPerson(district, street);
+    }
+
+    public RandomPerson nextRandomPerson(String district, String street) {
+        Gender gender = nextSex();
+        String firstName = nextFirstName(gender);
+        String lastName = nextLastName(gender);
+        return new RandomPerson(firstName, lastName, district, street);
     }
 
     private Gender nextSex() {
@@ -41,23 +56,12 @@ public enum Lottery {
         return lastName.substring(0, lastName.length() - 1) + "a";
     }
 
-    private String nextStreetInWola() {
-        List<String> names = DataSet.INSTANCE.WARSZAWA_WOLA;
-        return names.get(r.nextInt(names.size()));
+    private String nextDistrict() {
+        return districts.get(r.nextInt(districts.size()));
     }
 
-    public RandomPerson nextRandomPerson() {
-        Gender gender = nextSex();
-        String firstName = nextFirstName(gender);
-        String lastName = nextLastName(gender);
-        String street = nextStreetInWola();
-        return new RandomPerson(firstName, lastName, street);
-    }
-
-    public RandomPerson nextRandomPerson(String district, String street) {
-        Gender gender = nextSex();
-        String firstName = nextFirstName(gender);
-        String lastName = nextLastName(gender);
-        return new RandomPerson(firstName, lastName, district, street);
+    private String nextStreet(String district) {
+        List<String> streets = DataSet.INSTANCE.STREETS.get(district);
+        return streets.get(r.nextInt(streets.size()));
     }
 }

@@ -19,8 +19,7 @@ public class Ticket {
     }
 
     public RandomPerson scratchOff() {
-        if (street != null && district == null) return Lottery.INSTANCE.nextRandomPerson("Wola", street);
-        if (street != null) return Lottery.INSTANCE.nextRandomPerson(district, street);
+        if (street != null && district != null) return Lottery.INSTANCE.nextRandomPerson(district, street);
         else return Lottery.INSTANCE.nextRandomPerson();
     }
 }

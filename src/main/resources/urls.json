@@ -1,0 +1,24 @@
+{
+  "firstNamesUrl": "http://evacska.republika.pl/materialy/teoria/najpopularniejsze_imiona_w_polsce.htm",
+  "lastNamesUrl": "http://www.futrega.org/etc/nazwiska.html",
+  "districts": [
+    {"name": "Bemowo", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Bemowie"},
+    {"name": "Białołęka", "url": "http://warszawa.wikia.com/wiki/Ulice_w_Bia%C5%82o%C5%82%C4%99ce"},
+    {"name": "Bielany", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Bielanach"},
+    {"name": "Mokotów", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Mokotowie"},
+    {"name": "Ochota", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Ochocie"},
+    {"name": "Praga Południe", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Pradze_Po%C5%82udnie"},
+    {"name": "Praga Północ", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Pradze_P%C3%B3%C5%82noc"},
+    {"name": "Rembertów", "url": "http://warszawa.wikia.com/wiki/Ulice_w_Rembertowie"},
+    {"name": "Śródmieście", "url": "http://warszawa.wikia.com/wiki/Ulice_w_%C5%9Ar%C3%B3dmie%C5%9Bciu"},
+    {"name": "Targówek", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Targ%C3%B3wku"},
+    {"name": "Ursus", "url": "http://warszawa.wikia.com/wiki/Ulice_w_Ursusie"},
+    {"name": "Ursynów", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Ursynowie"},
+    {"name": "Wawer", "url": "http://warszawa.wikia.com/wiki/Ulice_w_Wawrze"},
+    {"name": "Wesoła", "url": "http://warszawa.wikia.com/wiki/Ulice_w_Weso%C5%82ej"},
+    {"name": "Wilanów", "url": "http://warszawa.wikia.com/wiki/Ulice_w_Wilanowie"},
+    {"name": "Włochy", "url": "http://warszawa.wikia.com/wiki/Ulice_we_W%C5%82ochach"},
+    {"name": "Wola", "url": "http://warszawa.wikia.com/wiki/Ulice_na_Woli"},
+    {"name": "Żoliborz", "url": "http://warszawa.wikia.com/wiki/Ulice_na_%C5%BBoliborzu"}
+  ]
+}
